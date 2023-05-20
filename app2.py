@@ -24,12 +24,12 @@ pip install html5lib
 pip install requests
 #
 
-# 
+# 웹 크롤링 
 import requests
-#
-def get_url(item_name, df_code):
+
+def get_url(item_name, df_code):                        # item_name과 df_code*name
     code = df_code.query("name=='{}'".format(item_name))['code'].to_string(index=False)
-    url = 'http://finance.naver.com/item/sise_day.nhn?code={code}'.format(code=code)
+    url = 'http://finance.naver.com/item/sise_day.nhn?code={code}'.format(code=code)    # 웹 크롤링하기
     
     print("요청 URL = {}".format(url))
     return url
