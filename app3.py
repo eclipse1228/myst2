@@ -92,7 +92,7 @@ plt.xlabel('지표')
 plt.ylabel('수익률')
 
 # 그래프 출력
-plt.show()
+st.pyplot(plt)
 
 #streamlit
 st.header("국민연금 비교 ")
@@ -109,7 +109,7 @@ plt.xlabel('Result')
 plt.ylabel('Count')
 plt.xticks([0, 1], ['Down', 'Up'])
 plt.title('국민연금 1년 종가 기준')
-plt.show()
+st.pyplot(plt)
 #
 
 def get_url(item_name, df_code):
@@ -124,10 +124,7 @@ header = {
 ###
 st.title("국민연금투자 2020, 2021")
 st.header("국민연금 vs 코스피")
-
-
 st.caption("국민연금의 투자종목은 투자금 비중이 높은 상위 10 % 종목으로 선별하였습니다.")
-
 ###
 
 
