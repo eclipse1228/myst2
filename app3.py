@@ -95,7 +95,7 @@ plt.ylabel('수익률')
 plt.show()
 
 #streamlit
-st.header(” 국민연금 투자 종목 1년 전후(종가기준)”)
+st.header("국민연금 비교 ")
 
 # o,1 그래프 그리기 ~ 91
 df_result = pd.DataFrame()
