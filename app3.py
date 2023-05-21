@@ -122,20 +122,11 @@ header = {
     "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'}
 
 ###
-st.title(”국민연금
-투자
-2020, 2021”)
-st.header(”국민연금vs
-코스피”)
+st.title("국민연금투자 2020, 2021”)
+st.header("국민연금 vs 코스피")
 
 
-st.caption(”국민연금의
-투자종목은
-투자금비중이
-높은
-상위
-10 % 종목으로
-선별하였습니다.”)
+st.caption("국민연금의 투자종목은 투자금 비중이 높은 상위 10 % 종목으로 선별하였습니다.")
 
 ###
 
