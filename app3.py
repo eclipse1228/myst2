@@ -122,7 +122,7 @@ header = {
     "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'}
 
 ###
-st.title("국민연금투자 2020, 2021”)
+st.title("국민연금투자 2020, 2021")
 st.header("국민연금 vs 코스피")
 
 
