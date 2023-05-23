@@ -90,7 +90,7 @@ if option == '국민연금 투자종목 손실/수익 분석':
         df_2020_price = df_2020_price.reset_index(drop=True)
     with st.spinner('국민연금 투자종목 손실/수익 그래프 생성중...'):
         #국민연금 종목 수익/손실 그래프
-        df_2021_price['result'] = (df_2021_price['종가'] > df_2020_price['종가']).astype(double)
+        df_2021_price['result'] = (df_2021_price['종가'] > df_2020_price['종가']).astype(int)
         result_counts = df_2021_price['result'].value_counts()
         plt.bar(result_counts.index, result_counts.values,color=['red', 'dodgerblue'])
         plt.ylabel('Count')
