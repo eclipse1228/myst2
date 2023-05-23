@@ -49,7 +49,7 @@ option = st.selectbox(
     ('국민연금 투자종목 손실/수익 분석', '국민연금 투자종목 차트분석'))
 if option == '국민연금 투자종목 손실/수익 분석':
     st.subheader('국민연금 투자종목 :blue[손실]/:red[수익] 분석:pencil:')
-    p = [59,84]
+    p = [60,84]
 
     def fetch_item(page, url):
         pg_url = f'{url}&page={page}'
@@ -90,22 +90,13 @@ if option == '국민연금 투자종목 손실/수익 분석':
         df_2020_price = df_2020_price.reset_index(drop=True)
     with st.spinner('국민연금 투자종목 손실/수익 그래프 생성중...'):
         #국민연금 종목 수익/손실 그래프
-        index_match = (df_2021_price.index == df_2020_price.index)
-    if index_match.all():
-        df_2021_price['result'] = (df_2021_price['종가'].values > df_2020_price['종가'].values).astype(int)
-    else:
-    # 인덱스를 맞춰줌
-        df_2021_price = df_2021_price.reindex(df_2020_price.index)
-        df_2021_price['result'] = (df_2021_price['종가'].values > df_2020_price['종가'].values).astype(int)
-    
         df_2021_price['result'] = (df_2021_price['종가'] > df_2020_price['종가']).astype(int)
         result_counts = df_2021_price['result'].value_counts()
         plt.bar(result_counts.index, result_counts.values,color=['red', 'dodgerblue'])
         plt.ylabel('Count')
         plt.xticks([0, 1], ['손실', '수익'],fontproperties=font_prop,size=10)
         plt.title('국민연금 종목 수익/손실 그래프',fontproperties=font_prop)
-        st.pyplot(plt) 
-        
+        st.pyplot(plt)   
     st.title('')
 elif option == '국민연금 투자종목 차트분석':
     with st.spinner('국민연금 투자 종목 데이터 분석중...'):
