@@ -241,6 +241,6 @@ elif option == '국민연금 투자종목 차트분석':
             plt.title(f'KOSPI/{name} 그래프',fontproperties=font_prop,size=28)
             st.pyplot(plt)
 image = Image.open('nps.jpg')
-resized_image = image.resize((600,333))
+resized_image = image.resize((600,400))
 st.image(resized_image,use_column_width=True)
 
