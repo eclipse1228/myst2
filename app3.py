@@ -8,7 +8,7 @@ import time
 import concurrent.futures
 import streamlit as st
 from mpl_finance import candlestick2_ohlc
-from PIL import Image #
+from PIL import Image
 
 st.title('　　　　:blue[국민연금] ')
 st.title('2020/2021년도 투자종목 분석:page_with_curl:')
@@ -240,5 +240,5 @@ elif option == '국민연금 투자종목 차트분석':
             plt.legend(handles=[variable_x],prop=font_prop)
             plt.title(f'KOSPI/{name} 그래프',fontproperties=font_prop,size=28)
             st.pyplot(plt)
-image = Image.open('nps.jpg') #
-st.image(image, caption='Image Caption', use_column_width=True) #
+image = Image.open('nps.jpg')
+st.image(image, caption='Image Caption', use_column_width=True) 
